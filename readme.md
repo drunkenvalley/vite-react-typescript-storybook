@@ -99,3 +99,7 @@ export default function Button ({ children, ...attrs }: Props) {
 ### Storybook
 
 A great toolkit for building your UI components in isolation before the site itself is complete, Storybook helps empower your build process. It also makes it easier to test and validate the components outside its intended context. See the [official Storybook webpage](https://storybook.js.org/) for more documentation.
+
+## Known issues
+
+Installing `ts-node` causes Storybook to not compile at all. This makes `jest` hard to include here.
