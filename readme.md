@@ -61,8 +61,6 @@ Among its most recognizable features we have JSX, which allows you to mix an HTM
 
 **Example:**
 
-`// Button.tsx`
-
 ```tsx
 export default function Button ({ children }) {
   return (
@@ -78,8 +76,6 @@ Adding Typescript to your project lets you opt into better typing. This gives yo
 
 **Example:**
 
-`// Component.tsx`
-
 ```tsx
 import { ReactNode, MouseEvent } from 'react'
 
@@ -89,7 +85,7 @@ interface Props {
   onClick?: (e: MouseEvent) => void
 }
 
-export default function Component ({ children, ...attrs }: Props) {
+export default function Button ({ children, ...attrs }: Props) {
   // VSCode will understand that attrs contains property 'className' and 'onClick',
   // though they might be because of the '?' in the interface.
   return (
