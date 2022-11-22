@@ -32,16 +32,18 @@ To add your own alias look to the `tsconfig.json`'s `path`, and `vite.config.ts`
 
 **Example:**
 
+`// tsconfig.json`
+
 ```json
-// tsconfig.json
 "baseUrl": "./",
 "paths": {
     "@/*": ["src/*"]
 },
 ```
 
+`// vite.config.ts`
+
 ```typescript
-// vite.config.ts
 resolve: {
   alias: {
     "@": resolve(__dirname, "src")
@@ -59,8 +61,9 @@ Among its most recognizable features we have JSX, which allows you to mix an HTM
 
 **Example:**
 
+`// Button.tsx`
+
 ```tsx
-// Button.tsx
 export default function Button ({ children }) {
   return (
     <button className="bg-dark text-light" onClick={(e) => e.preventDefault()}>
@@ -74,6 +77,8 @@ export default function Button ({ children }) {
 Adding Typescript to your project lets you opt into better typing. This gives you better autocompletion for objects through interfaces, et al. See the [official Typescript webpage](https://www.typescriptlang.org/) for more documentation.
 
 **Example:**
+
+`// Component.tsx`
 
 ```tsx
 import { ReactNode, MouseEvent } from 'react'
